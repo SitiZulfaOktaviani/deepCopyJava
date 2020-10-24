@@ -12,10 +12,6 @@ public class Categories {
         this.bentuk = bentuk;
     }
 
-
-    public Categories(int id, String nama, String jenis) {
-    }
-
     public int getId(){
         return id;
     }
@@ -48,18 +44,11 @@ public class Categories {
         this.bentuk = bentuk;
     }
 
-//    clone
-//    @Override
-//    public Object clone() throws CloneNotSupportedException{
-//        Categories ctg = (Categories)super.clone();
-//        ctg.setNama(new String(getNama().getId(), get));
-//    }
-
     public Categories clone() {
         try {
             return (Categories) super.clone();
         } catch (CloneNotSupportedException e) {
-            return new Categories(this.getId(), this.getNama(), this.getJenis());
+            return new Categories(this.getId(), this.getNama(), this.getJenis(), this.getBentuk());
         }
     }
 
